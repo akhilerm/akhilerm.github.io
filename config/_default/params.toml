@@ -5,7 +5,7 @@ profilePicture = "images/akhilerm.jpg"
 favicon = "favicons/"
 disableThemeSwitcher = true
 contentRatio = 0.7
-googleAnalytics = "UA-96528618-1"
+gtagId = "G-3QDB62WNH6"
 
 
 mainSections = []
