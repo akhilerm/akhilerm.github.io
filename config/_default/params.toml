@@ -3,7 +3,6 @@ author = "Akhil Mohan"
 description = "Engineer | Thinker | Learner"
 profilePicture = "images/akhilerm.jpg"
 favicon = "favicons/"
-displayMode = "dark"
 disableThemeSwitcher = true
 contentRatio = 0.7
 googleAnalytics = "UA-96528618-1"
