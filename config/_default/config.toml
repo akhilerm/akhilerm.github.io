@@ -1,0 +1,6 @@
+baseURL = "https://akhilerm.com/"
+languageCode = "en-us"
+title = "Akhil"
+theme = "anatole"
+enableEmoji = true
+enableRobotsTXT = true

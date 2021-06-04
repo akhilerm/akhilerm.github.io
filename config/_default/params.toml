@@ -1,0 +1,32 @@
+title = "Akhil"
+author = "Akhil Mohan"
+description = "Engineer | Thinker | Dreamer"
+profilePicture = "images/akhilerm.jpg"
+favicon = "favicons/"
+displayMode = "dark"
+disableThemeSwitcher = true
+contentRatio = 0.7
+googleAnalytics = "UA-96528618-1"
+
+
+mainSections = []
+
+[[socialIcons]]
+icon = "fab fa-linkedin"
+title = "Linkedin"
+url = "https://linkedin.com/in/akhilerm"
+
+[[socialIcons]]
+icon = "fab fa-github"
+title = "GitHub"
+url = "https://github.com/akhilerm"
+
+[[socialIcons]]
+icon = "fab fa-twitter"
+title = "Twitter"
+url = "https://twitter.com/akhilerm"
+
+[[socialIcons]]
+icon = "fas fa-envelope"
+title = "e-mail"
+url = "mailto:akhilerm@gmail.com"
