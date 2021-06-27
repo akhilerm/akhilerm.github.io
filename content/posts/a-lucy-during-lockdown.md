@@ -20,9 +20,9 @@ Characters:
 - [Vishnu](https://www.facebook.com/vishnu.thampan.5) 
 - [Sr.Rosily](https://www.alphonsaschoolaruvithura.com/alphonsa-school-management.php)
 - and the actors
-	- Jake Gyllenhaal
-	- Adam Sandler
-	- Cliff Curtis
+	- [Jake Gyllenhaal](https://en.wikipedia.org/wiki/Jake_Gyllenhaal)
+	- [Adam Sandler](https://en.wikipedia.org/wiki/Adam_Sandler)
+	- [Cliff Curtis](https://en.wikipedia.org/wiki/Cliff_Curtis)
 
 ##### Scene 1
 A movie screening is going on in the auditorium of my higher secondary school which is mostly empty. On the front row is the director of the movie Vishnu, and sitting next to him is the principal Sr.Rosily from my high school. I was quite amused because I didn't get why my high school principal was seated in place of my +2 principal. Iam standing at a door towards the back of the auditorium. Vishnu sees me , and asks me to take a seat next to him. I politiley declined. Then the principal sees me and asks me to take a seat in the front row. I declined and stood there standing with my hands crossed. After standing there for sometime, my legs became tired, so I sat back in one of the chairs in the last row. While watching the movie and trying hard to understand what is going on, I see a familiar figure approaching with a tray of glasses. He offered the drinks to the front row and approached me. When he came near me, I recognised that he was someone who studied in my higher secondary school in another batch. (TBH, forgot his name). He offered me the drinks (which was lime juice) and we started talking. He told that he is currently in charge of the school canteen and should come there for the lunch after the movie screening. Suddenly a bright flash of light appeared from the movie screen.
