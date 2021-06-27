@@ -1,7 +1,7 @@
 ---
 title: "A Lucy During Lockdown"
 date: 2021-05-19T00:31:25+05:30
-draft: true
+draft: false
 categories:
 - Dream
 - Blog
