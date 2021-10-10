@@ -11,8 +11,8 @@ weight = 200
 url = "/posts"
 
 [[main]]
-name = "Projects"
-identifier = "about"
+name = "Portfolio"
+identifier = "portfolio"
 weight = 300
-url = "/projects"
+url = "/portfolio"
 
