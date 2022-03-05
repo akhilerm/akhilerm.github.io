@@ -22,6 +22,10 @@
 
 #### Personal Projects 👨 
 
+###### 2022
+- [Eywa 💳](https://github.com/akhilerm/eywa) : Service to generate UPI payment request for pending splitwise balance.
+
+
 ###### 2021
 - [Tag-Push github action📦🐬](https://github.com/akhilerm/tag-push-action) : Github Action to retag and push multiplatform container images to multiple remote registries.
 
