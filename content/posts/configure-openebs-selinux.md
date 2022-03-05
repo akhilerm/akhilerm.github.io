@@ -9,6 +9,6 @@ tags:
 - openebs
 - selinux
 - tutorial
-affiliatelink: "https://openebs.io/blog/configuring-openebs-to-run-with-security-enhanced-linux/"
+affiliatelink: "https://openebs.io/blog/configuring-openebs-to-run-with-security-enhanced-linux"
 ---
 

@@ -8,6 +8,6 @@ categories:
 tags:
 - openebs
 - blockdevice
-affiliatelink: "https://openebs.io/blog/creating-manual-blockdevice/"
+affiliatelink: "https://openebs.io/blog/creating-manual-blockdevice"
 ---
 

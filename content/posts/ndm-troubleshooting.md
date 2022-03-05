@@ -8,6 +8,6 @@ categories:
 tags:
 - openebs
 - ndm
-affiliatelink: "https://openebs.io/blog/openebs-node-device-management-ndm-e2-80-8a--e2-80-8atroubleshooting-tips/"
+affiliatelink: "https://openebs.io/blog/openebs-node-device-management-(ndm)%E2%80%8A%E2%80%94%E2%80%8Atroubleshooting-tips"
 ---
 

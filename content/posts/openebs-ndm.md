@@ -9,6 +9,6 @@ tags:
 - openebs
 - kubernetes
 - ndm
-affiliatelink: "https://openebs.io/blog/openebs-ndm-goto-solution-for-managing-kubernetes-local-storage"
+affiliatelink: "https://openebs.io/blog/openebs-ndm,-go-to-solution-for-managing-kubernetes-local-storage"
 ---
 

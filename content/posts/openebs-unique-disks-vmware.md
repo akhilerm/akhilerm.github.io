@@ -8,6 +8,6 @@ categories:
 tags:
 - openebs
 - vmware
-affiliatelink: "https://openebs.io/blog/uniquely-identifying-disks-in-openebs-on-vmware-platform/"
+affiliatelink: "https://openebs.io/blog/uniquely-identifying-disks-in-openebs-on-vmware-platform"
 ---
 
