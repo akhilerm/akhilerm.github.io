@@ -1,0 +1,71 @@
+<!doctype html><html dir=ltr lang=en data-theme><head><title>Akhil Mohan | Understanding OCI Image Spec</title><meta charset=utf-8><meta name=generator content="Hugo 0.99.1"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name=description content="Engineer | Thinker | Learner"><link rel=stylesheet href=/css/main.min.dff2ffcfdc3abec70d115f54bfd241e8054ae72be89920959335f32858fab73d.css integrity="sha256-3/L/z9w6vscNEV9Uv9JB6AVK5yvomSCVkzXzKFj6tz0=" crossorigin=anonymous type=text/css><link rel=stylesheet href=/css/markupHighlight.min.f798cbda9aaa38f89eb38be6414bd082cfd71a6780375cbf67b6d2fb2b96491e.css integrity="sha256-95jL2pqqOPies4vmQUvQgs/XGmeAN1y/Z7bS+yuWSR4=" crossorigin=anonymous type=text/css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin=anonymous><link rel="shortcut icon" href=/favicons/favicon.ico type=image/x-icon><link rel=apple-touch-icon sizes=180x180 href=/favicons/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicons/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicons/favicon-16x16.png><link rel=canonical href=/posts/understanding-oci-image-spec/><script type=text/javascript src=/js/anatole-header.min.df804b63b5bd8474ea0756ea874bc8f1e92552708cc6ea43aa0d76981dc419f9.js integrity="sha256-34BLY7W9hHTqB1bqh0vI8eklUnCMxupDqg12mB3EGfk=" crossorigin=anonymous></script><meta name=twitter:card content="summary"><meta name=twitter:title content="Understanding OCI Image Spec"><meta name=twitter:description content="As part of understanding the OCI image spec, I found that a good explanation of the image spec will help others. Explaining a few things here, which I found a little bit difficult to grasp while reading the spec.
+Image Format The spec defines an OCI image. This image spec is almost similar to Docker V2.2 image schema format. Image services like containerd can pull this image, and then create a bundle (more on this as I learn about it)."></head><body><div class="sidebar animated fadeInDown"><div class=logo-title><div class=title><img src=/images/akhilerm.jpg alt="profile picture"><h3 title><a href=/>Akhil</a></h3><div class=description><p>Engineer | Thinker | Learner</p></div></div></div><ul class=social-links><li><a href=https://linkedin.com/in/akhilerm rel=me aria-label=Linkedin><i class="fab fa-linkedin fa-2x" aria-hidden=true></i></a></li><li><a href=https://github.com/akhilerm rel=me aria-label=GitHub><i class="fab fa-github fa-2x" aria-hidden=true></i></a></li><li><a href=https://twitter.com/akhilerm rel=me aria-label=Twitter><i class="fab fa-twitter fa-2x" aria-hidden=true></i></a></li><li><a href=mailto:akhilerm@gmail.com rel=me aria-label=e-mail><i class="fas fa-envelope fa-2x" aria-hidden=true></i></a></li></ul><div class=footer><div class=by_farbox>&copy; Akhil Mohan 2022</div></div></div><div class=main><div class="page-top animated fadeInDown"><a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false><span aria-hidden=true></span>
+<span aria-hidden=true></span>
+<span aria-hidden=true></span></a><ul class=nav id=navMenu><li><a href=/ title>Home</a></li><li><a href=/posts title>Posts</a></li><li><a href=/portfolio title>Portfolio</a></li></ul></div><div class=autopagerize_page_element><div class=content><div class="post animated fadeInDown"><div class=post-content><div class=post-title><h3>Understanding OCI Image Spec</h3></div><p>As part of understanding the <a href=https://github.com/opencontainers/image-spec>OCI image spec</a>, I found that a good
+explanation of the image spec will help others. Explaining a few things here, which I found a little bit difficult to
+grasp while reading the <a href=https://github.com/opencontainers/image-spec/blob/main/spec.md>spec</a>.</p><h3 id=image-format>Image Format</h3><p>The spec defines an OCI image. This image spec is almost similar to Docker V2.2 image schema format. Image services
+like containerd can pull this image, and then create a bundle (more on this as I learn about it).</p><p>First, let me explain some of the basics that is used in the image spec so that it is easier to understand once we move
+on to higher level concepts.</p><h5 id=mediatype>MediaType</h5><p>This field is used in the spec, so as to identify what an object corresponds to. For example, <code>"application/vnd.oci.image.manifest.v1+json"</code>,
+is used to identify an image manifest. The complete list of mediatypes can be found <a href=https://github.com/opencontainers/image-spec/blob/main/specs-go/v1/mediatype.go>here</a>.</p><h5 id=digest>Digest</h5><p>The field represents the digest of the content. Normally it will be a sha256 sum. It can be said as a content addressable
+storage form. Let me explain what is a content addressable form, suppose the following is the content of a file</p><pre tabindex=0><code>{
+   &#34;schemaVersion&#34;: 2,
+   &#34;mediaType&#34;: &#34;application/vnd.docker.distribution.manifest.v2+json&#34;,
+   &#34;config&#34;: {
+      &#34;mediaType&#34;: &#34;application/vnd.docker.container.image.v1+json&#34;,
+      &#34;size&#34;: 1485,
+      &#34;digest&#34;: &#34;sha256:46331d942d6350436f64e614d75725f6de3bb5c63e266e236e04389820a234c4&#34;
+   },
+   &#34;layers&#34;: [
+      {
+         &#34;mediaType&#34;: &#34;application/vnd.docker.image.rootfs.diff.tar.gzip&#34;,
+         &#34;size&#34;: 3208,
+         &#34;digest&#34;: &#34;sha256:7050e35b49f5e348c4809f5eff915842962cb813f32062d3bbdd35c750dd7d01&#34;
+      }
+   ]
+}
+</code></pre><p>and the <code>sha256</code> sum of this content is <code>432f982638b3aefab73cc58ab28f5c16e96fdb504e8c134fc58dff4bae8bf338</code>. Then this
+content will be stored in a file with name <code>432f982638b3aefab73cc58ab28f5c16e96fdb504e8c134fc58dff4bae8bf338</code>.</p><pre tabindex=0><code>root@ubuntuvmw:# sha256sum -b 432f982638b3aefab73cc58ab28f5c16e96fdb504e8c134fc58dff4bae8bf338 
+432f982638b3aefab73cc58ab28f5c16e96fdb504e8c134fc58dff4bae8bf338 *432f982638b3aefab73cc58ab28f5c16e96fdb504e8c134fc58dff4bae8bf338
+</code></pre><p>So we can identify the file by its content. The file can contain image configuration or sometimes be gzip&rsquo;ed files.
+The full path of the file will be <code>blob/sha256/&lt;sha256></code>, where <code>blob</code> means this is a binary blob, <code>sha256</code> is the
+algorithm used to generate the digest and then the actual file name.</p><pre tabindex=0><code>root@ubuntuvmw:/var/lib/containerd/io.containerd.content.v1.content/blobs/sha256# ls -l
+total 61788
+-r--r--r-- 1 root root 17067249 May 19 17:53 00fcd775d5c6fe8b686bc4cc1c604548a75981a5f4972c552ddf02dd3a592b12
+-r--r--r-- 1 root root     3069 May 19 17:53 08b57ba4cbdadace2ff536b8b05808100a54e844215321be541d06e6829c5f64
+-r--r--r-- 1 root root     1386 May 19 17:53 0c099543f270a7dded82d2efbdb6ad543959950507228be027225ab95950f2f4
+-r--r--r-- 1 root root     2562 May  9 16:56 10d7d58d5ebd2a652f4d93fdd86da8f265f5318c6a73cc5b6a9798ff6d2b2e67
+-r--r--r-- 1 root root     1184 May 19 17:51 162d762e6ae2b5e4a938679d2756481d95a3f6b37d45287dbed8b301a091d3c9
+-r--r--r-- 1 root root 27169393 May 19 17:51 185e8a4c100571f111d924b5d4399d89f163bf95d71ce2c6a33f656a66c52f0a
+-r--r--r-- 1 root root     1363 May 10 10:04 3d674d3f3c0fce3bf2552e02564dc37e1556c0cf68d70a0cb6e143216a1eb510
+-r--r--r-- 1 root root      949 May 18 11:07 3e4ac559bd32e387adb8b509b1bbc07f6fff76f78ab77f4e73c8022800044565
+-r--r--r-- 1 root root      525 May  9 16:56 432f982638b3aefab73cc58ab28f5c16e96fdb504e8c134fc58dff4bae8bf338
+-r--r--r-- 1 root root     1390 May 10 10:04 51f76c0d1bb7de1d4df4afc178599c001c6055f6218589257b6538f7502702be
+-r--r--r-- 1 root root      740 May 17 20:08 5401e20b0410d156b3c4f2827a2b335687119cf1fb231455ff5656c2d73941cb
+-r--r--r-- 1 root root     1386 May 17 20:19 55d31f3af94c797b65b310569803cacc1c9f4a34bf61afcdc8138f89345c8308
+-r--r--r-- 1 root root 18964190 May 19 17:51 5652aee039c525b5a4324443551f5f137d285641af75ee005594c08e901ca0c3
+-r--r--r-- 1 root root      741 May 19 17:53 602204011e2f3366bfdd441003998a8f066c81ca9b90493b135d6c2c278f1439
+-r--r--r-- 1 root root      949 May 17 20:19 84921482d941f71aa8a8bd399a54d0956a81057332a67ac01e4de04c8c4e57da
+-r--r--r-- 1 root root     1386 May 17 20:27 9c2b1dd085f4249cab11cd4d536fd97ecf89a0b752d79a676cff97f3c2889413
+-r--r--r-- 1 root root     1386 May 18 11:07 be917c6d0bc015a245741f71966c6a0b1d08bf8b48da6387cad5e7c53c7067ae
+-r--r--r-- 1 root root     3546 May 19 17:51 f3118e629e524f427f525ab7b73d78eaecc1a919edb7a0a886d7fafbbb1d6bd1
+-r--r--r-- 1 root root      740 May 17 20:27 f901cb1ae59bcd7e4f8d0243037801c80736f4e00a587e670c0f8e9468e09f08
+</code></pre><p>This is the list of all blobs in my directory, each of this can be an image manifest, or root filesystems.</p><p>More about the digest implementation in golang can be found <a href=https://github.com/opencontainers/go-digest/blob/master/digest.go>here</a></p><h5 id=descriptors>Descriptors</h5><p>An OCI image is composed of various types of contents(index, manifest, layers) arranged in Directed Acyclic Graph(DAG).
+The references between this different types of content are described using a Content Descriptor. The main components
+are:</p><ul><li><code>mediaType</code>: It represents what type of content this descriptor refers to. It can be an image index, manifest or
+tar archives</li><li><code>digest</code>: It represents the digest of the content. This digest can be used to access the content from the storage.</li><li><code>size</code>: The size of the content in bytes.</li></ul><p>Once you have the above the items, you can parse any content. For example:</p><pre tabindex=0><code>{
+    &#34;mediaType&#34;: &#34;application/vnd.docker.image.rootfs.diff.tar.gzip&#34;,
+    &#34;digest&#34;: &#34;sha256:552d1f2373af9bfe12033568ebbfb0ccbb0de11279f9a415a29207e264d7f4d9&#34;,
+    &#34;size&#34;: 2711827
+}
+</code></pre><p>means that use the file named <code>552d1f2373af9bfe12033568ebbfb0ccbb0de11279f9a415a29207e264d7f4d9</code> from the blob and parse
+it as a gzip tar archive</p><p>Once the above basic concepts are understood we can look how an image is organized.
+<img src=/images/oci-image22052022.png alt=Image></p><ul><li>Image Index: Contains the various manifests for the different images. For example. <code>linux/amd64</code> and <code>linux/arm64</code> will
+be separate manifests, but will be available under the same index. Depending on the platform requested, the corresponding
+manifest will be loaded. Manifests will be referenced via content descriptors from an index.</li><li>Manifest: Contains the configuration and various layers in the image. Config and Layers will be referenced via content
+descriptor from the manifest</li><li>Config: The config contains the various configuration data like: rootfs, exposed ports, environment variables.</li><li>Layers: The actual image layers. These layers are applied one by one, on top of the rootfs to create the actual image
+filesystem. The content descriptor from layers will be pointing to tar/gzip archives on the storage for the image
+filesytem.</li></ul><p>NOTE: This document should only be considered as a primer for reading the image-spec, so that you dont get confused and
+wont have to jump between links when reading the image spec.</p></div><div class=post-footer><div class=info><span class=separator><a class=category href=/categories/tech/>Tech</a><a class=category href=/categories/blog/>Blog</a></span>
+<span class=separator><a class=tag href=/tags/oci/>oci</a><a class=tag href=/tags/container/>container</a></span></div></div></div></div></div></div><script type=text/javascript src=/js/medium-zoom.min.c27b7f972e410a06deca0280289de1ccb47ce20f6efcabbc7f31bbfa58b3761e.js integrity="sha256-wnt/ly5BCgbeygKAKJ3hzLR84g9u/Ku8fzG7+lizdh4=" crossorigin=anonymous></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3QDB62WNH6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-3QDB62WNH6")</script></body></html>
