@@ -2,10 +2,11 @@
 - [Azure](https://github.com/pulls?q=is%3Apr+user%3Aazure+author%3Aakhilerm) 
 - [Containerd](https://github.com/pulls?q=is%3Apr+user%3Acontainerd+author%3Aakhilerm) 
 - [diskfs](https://github.com/pulls?q=is%3Apr+user%3Adiskfs+author%3Aakhilerm): Fix for creating partitions on disk 
-- [Docker](https://github.com/pulls?q=is%3Apr+user%3Adocker+author%3Aakhilerm) / [Moby](https://github.com/pulls?q=is%3Apr+user%3Amoby+author%3Aakhilerm): Fixes related to accessing devices in privileged mode
+- [Docker](https://github.com/pulls?q=is%3Apr+user%3Adocker+author%3Aakhilerm): Fixes related to accessing devices in privileged mode
 - [Google Container Tools](https://github.com/pulls?q=is%3Apr+user%3Agooglecontainertools+author%3Aakhilerm), [Google](https://github.com/pulls?q=is%3Apr+user%3Agoogle+author%3Aakhilerm): Added support for new method in golang github API
 - [Kubernetes](https://github.com/pulls?q=is%3Apr+user%3Akubernetes+author%3Aakhilerm)
 - [Kubesphere](https://github.com/pulls?q=is%3Apr+user%3Akubesphere+author%3Aakhilerm)
+- [Moby](https://github.com/pulls?q=is%3Apr+user%3Amoby+author%3Aakhilerm)
 - [OpenEBS](https://github.com/pulls?q=is%3Apr+user%3Aopenebs+author%3Aakhilerm): Maintainer of OpenEBS disk management plane and local storage options
 - [Seagate](https://github.com/pulls?q=is%3Apr+user%3Aseagate+author%3Aakhilerm): Bug fix for NVMe device and memory corruption
 
