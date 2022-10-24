@@ -14,6 +14,8 @@
 
 
 #### Talks 👨🎤
+- 2022
+    - Container 101 @ SODA Forum [OpenSource India](https://www.opensourceindia.in/agenda-2022/)
 - 2021
     - Container Attached Storage 101 @ [CNCF Bangalore Meetup](https://www.meetup.com/Bangalore-CNCF-Meetup/events/278675768/)
     - Heterogeneous CSI Drivers @ [OpenSource India](https://www.opensourceindia.in/conference-agenda-2021/)
