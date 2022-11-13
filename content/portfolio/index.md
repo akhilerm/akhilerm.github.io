@@ -30,6 +30,9 @@
 ###### 2022
 - [Eywa 💳](https://github.com/akhilerm/eywa) : Service to generate UPI payment request for pending splitwise balance.
 
+- [YouTube Music Alexa Skill ▶️ ](https://github.com/akhilerm/youtube-music-alexa-skill) : Alexa skill to play songs from Youtube music on Amazon Echo devices.
+
+- [Storage Counter Alexa Skill 🗄️](https://github.com/akhilerm/storage-counter-alexa-skill) : Alexa skill to keep track of items at home.
 
 ###### 2021
 - [Tag-Push github action📦🐬](https://github.com/akhilerm/tag-push-action) : Github Action to retag and push multiplatform container images to multiple remote registries.
