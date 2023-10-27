@@ -8,7 +8,7 @@
 - [Kubernetes](https://github.com/pulls?q=user%3Akubernetes+involves%3Aakhilerm): Maintainer of [k8s-publishing-bot](https://github.com/k8s-publishing-bot)
 - [Kubesphere](https://github.com/pulls?q=user%3Akubesphere+involves%3Aakhilerm)
 - [Moby](https://github.com/pulls?q=user%3Amoby+involves%3Aakhilerm)
-- [OpenEBS](https://github.com/pulls?q=user%3Amoby+involves%3Aakhilerm): Maintainer of OpenEBS disk management plane and local storage options
+- [OpenEBS](https://github.com/pulls?q=user%3Aopenebs+involves%3Aakhilerm): Maintainer of OpenEBS disk management plane and local storage options
 - [Seagate](https://github.com/pulls?q=user%3Aseagate+involves%3Aakhilerm): Bug fix for NVMe device and memory corruption
 
 ⚠️ Sign in to github to view complete list of contributions.
