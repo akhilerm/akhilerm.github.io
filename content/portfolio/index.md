@@ -17,6 +17,8 @@
 
 
 #### Talks 👨🎤
+- 2023
+    - Releasing Kubernetes Libraries using publishing-bot @ [Kubernetes Contributor Summit NA](https://sched.co/1Sp9W)
 - 2022
     - Container 101 @ SODA Forum [OpenSource India](https://www.opensourceindia.in/agenda-2022/)
 - 2021
