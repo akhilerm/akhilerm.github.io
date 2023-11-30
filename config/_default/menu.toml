@@ -16,3 +16,8 @@ identifier = "portfolio"
 weight = 300
 url = "/portfolio"
 
+[[main]]
+name = "Resume"
+identifier = "resume"
+weight = 300
+url = "https://resume.akhilerm.com"

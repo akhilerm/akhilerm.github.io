@@ -29,9 +29,3 @@ url = "https://twitter.com/akhilerm"
 icon = "fas fa-envelope"
 title = "e-mail"
 url = "mailto:akhilerm@gmail.com"
-
-
-[[socialIcons]]
-icon = "far fa-file"
-title = "Resume"
-url = "https://drive.google.com/file/d/1cHjH0utyloZfpiV5WOm1KvgFy-QcOfYt/view?usp=sharing"
