@@ -17,6 +17,8 @@
 
 
 #### Talks 👨🎤
+- 2024
+    - What’s New in Containerd 2.0? @ [KubeCon + CloudNativeCon EU](https://www.youtube.com/watch?v=u89nrwWoA-w)
 - 2023
     - Releasing Kubernetes Libraries using publishing-bot @ [Kubernetes Contributor Summit NA](https://sched.co/1Sp9W)
     - Finch: An Open Source Client for Container Development by AWS @ [AWS Community Day Kochi 2023](https://www.youtube.com/watch?v=aM9MArQRki4)
