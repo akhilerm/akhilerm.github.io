@@ -1,18 +1,10 @@
-#### OpenSource Contributions 🌐🖥️
+#### OpenSource 🌐🖥️
 
-⚠️ Sign in to github to view complete list of contributions.
+🐙 [GitHub](https://github.com/akhilerm)
 
-- [Azure](https://github.com/pulls?q=user%3Aazure+involves%3Aakhilerm) 
-- [containerd](https://github.com/pulls?q=user%3Acontainerd+involves%3Aakhilerm) 
-- [diskfs](https://github.com/pulls?q=user%3Adiskfs+involves%3Aakhilerm): Fix for creating partitions on disk 
-- [Docker](https://github.com/pulls?q=user%3Adocker+involves%3Aakhilerm): Fixes related to accessing devices in privileged mode
-- [Google Container Tools](https://github.com/pulls?q=user%3Agooglecontainertools+involves%3Aakhilerm)
-- [Google](https://github.com/pulls?q=user%3Agoogle+involves%3Aakhilerm): Added support for new method in golang github API
-- [Kubernetes](https://github.com/pulls?q=user%3Akubernetes+involves%3Aakhilerm): Maintainer of [k8s-publishing-bot](https://github.com/k8s-publishing-bot)
-- [Kubesphere](https://github.com/pulls?q=user%3Akubesphere+involves%3Aakhilerm)
-- [Moby](https://github.com/pulls?q=user%3Amoby+involves%3Aakhilerm)
-- [OpenEBS](https://github.com/pulls?q=user%3Aopenebs+involves%3Aakhilerm): Maintainer of OpenEBS disk management plane and local storage options
-- [Seagate](https://github.com/pulls?q=user%3Aseagate+involves%3Aakhilerm): Bug fix for NVMe device and memory corruption
+- [containerd](https://github.com/containerd) Maintainer
+- [Kubernetes publishing-bot](https://github.com/k8s-publishing-bot) Maintainer
+- [OpenEBS](https://github.com/openebs) Emeritus Maintainer
 
 
 
