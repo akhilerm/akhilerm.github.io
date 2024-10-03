@@ -20,4 +20,4 @@ url = "/portfolio"
 name = "Resume"
 identifier = "resume"
 weight = 300
-url = "https://docs.google.com/viewer?url=https://akhilerm.s3.amazonaws.com/akhilerm.pdf"
+url = "https://akhilerm.s3.amazonaws.com/akhilerm.pdf"
