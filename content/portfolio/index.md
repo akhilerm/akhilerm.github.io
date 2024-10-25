@@ -12,6 +12,7 @@
 - 2024
     - What’s New in Containerd 2.0? @ [KubeCon + CloudNativeCon EU](https://www.youtube.com/watch?v=u89nrwWoA-w)
     - Containerd: Project Update and Deep Dive @[KubeCon + CloudNativeCon + Open Source Summit + AI_dev China](https://www.youtube.com/watch?v=J9sHhDfYRwA)
+    - Improving container startup time using stargz @ [DevOpsDays Kerala](https://www.youtube.com/watch?v=HK-LEHr3qjs)
 - 2023
     - Releasing Kubernetes Libraries using publishing-bot @ [Kubernetes Contributor Summit NA](https://sched.co/1Sp9W)
     - Finch: An Open Source Client for Container Development by AWS @ [AWS Community Day Kochi 2023](https://www.youtube.com/watch?v=aM9MArQRki4)
