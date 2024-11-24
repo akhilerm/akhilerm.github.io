@@ -90,7 +90,18 @@ storage:
 
 8. Start the registry container at port 5000
 ```
-docker run -d  -p 5000:5000 --restart=always --name registry   -v $PWD/my-docker-registry/data:/var/lib/registry   -v $PWD/my-docker-registry/auth:/auth   -e "REGISTRY_AUTH=htpasswd"   -e "REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm"   -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd   -v $PWD/my-docker-registry/certs:/certs -v $PWD/my-docker-registry/config.yml:/etc/docker/registry/config.yml  -e REGISTRY_HTTP_ADDR=0.0.0.0:5000   -e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/domain.crt   -e REGISTRY_HTTP_TLS_KEY=/certs/domain.key   registry:2.8.3
+docker run -d -p 5000:5000 --restart=always --name registry \
+	-v $PWD/my-docker-registry/data:/var/lib/registry \
+	-v $PWD/my-docker-registry/auth:/auth \
+	-v $PWD/my-docker-registry/certs:/certs \
+	-v $PWD/my-docker-registry/config.yml:/etc/docker/registry/config.yml \
+	-e "REGISTRY_AUTH=htpasswd" \
+	-e "REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm" \
+	-e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd \
+	-e REGISTRY_HTTP_ADDR=0.0.0.0:5000 \
+	-e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/domain.crt \
+	-e REGISTRY_HTTP_TLS_KEY=/certs/domain.key \
+	registry:2.8.3
 ``` 
 
 9. Now login to the local registry
