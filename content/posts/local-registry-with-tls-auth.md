@@ -1,6 +1,6 @@
 ---
 title: "Deploying Local Registry with TLS and Auth"
-date: 2024-11-24T16:14:55+04:00
+date: 2024-11-24T16:14:55+05:30
 draft: false
 categories:
 - Tech

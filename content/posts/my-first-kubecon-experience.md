@@ -1,6 +1,6 @@
 ---
 title: " Unforgettable Moments and New Milestones: My First KubeCon Experience"
-date: 2023-12-12T16:14:55+04:00
+date: 2023-12-12T16:14:55+05:30
 draft: false
 categories:
 - Tech

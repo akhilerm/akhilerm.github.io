@@ -1,6 +1,6 @@
 ---
 title: "Understanding OCI Image Spec"
-date: 2022-05-21T16:14:55+04:00
+date: 2022-05-21T16:14:55+05:30
 draft: false
 categories:
 - Tech
