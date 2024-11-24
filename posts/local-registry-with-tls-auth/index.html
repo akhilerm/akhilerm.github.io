@@ -1,0 +1,117 @@
+<!doctype html><html dir=ltr lang=en data-theme class="html theme--light"><head><meta charset=utf-8><title>Akhil Mohan
+|
+Deploying Local Registry with TLS and Auth
+</title><meta name=generator content="Hugo 0.128.2"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name=author content="Akhil Mohan"><meta name=description content="Engineer | Thinker | Learner"><link rel=stylesheet href=/scss/main.min.b40260d874cc59894500a1287a2a7e4acc0a2b13cba24968bc83f46fc4d4c679.css integrity="sha256-tAJg2HTMWYlFAKEoeip+SswKKxPLoklovIP0b8TUxnk=" crossorigin=anonymous type=text/css><link rel=stylesheet href=/css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA=" crossorigin=anonymous type=text/css><link rel=stylesheet href=/fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8=" crossorigin=anonymous type=text/css><link rel=stylesheet href=/fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps=" crossorigin=anonymous type=text/css><link rel=stylesheet href=/fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs=" crossorigin=anonymous type=text/css><link rel=stylesheet href=/fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc=" crossorigin=anonymous type=text/css><link rel="shortcut icon" href=/favicons/favicon.ico type=image/x-icon><link rel=apple-touch-icon sizes=180x180 href=/favicons/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicons/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicons/favicon-16x16.png><link rel=canonical href=https://akhilerm.com/posts/local-registry-with-tls-auth/><script type=text/javascript src=/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js integrity="sha256-+RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI=" crossorigin=anonymous></script><meta name=twitter:card content="summary"><meta name=twitter:title content="Deploying Local Registry with TLS and Auth"><meta name=twitter:description content="If you are working with container images, there will be cases where you want to have a proper registry setup locally with TLS and authentication for testing as well as CI purposes. The below steps outline how a local registry can be deployed with a self signed certificate.
+Create a directory for storing the registry data, certificates and authentication data. mkdir -p ./my-docker-registry/{auth,certs,data} Now create the authentication data using htpasswd docker run --rm --entrypoint htpasswd httpd:2 -Bbn <user> <password> > ."><meta property="og:url" content="https://akhilerm.com/posts/local-registry-with-tls-auth/"><meta property="og:site_name" content="Akhil"><meta property="og:title" content="Deploying Local Registry with TLS and Auth"><meta property="og:description" content="If you are working with container images, there will be cases where you want to have a proper registry setup locally with TLS and authentication for testing as well as CI purposes. The below steps outline how a local registry can be deployed with a self signed certificate.
+Create a directory for storing the registry data, certificates and authentication data. mkdir -p ./my-docker-registry/{auth,certs,data} Now create the authentication data using htpasswd docker run --rm --entrypoint htpasswd httpd:2 -Bbn <user> <password> > ."><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2024-11-24T16:14:55+05:30"><meta property="article:modified_time" content="2024-11-24T16:14:55+05:30"><meta property="article:tag" content="Registry"><meta property="article:tag" content="Docker"><meta property="article:tag" content="Tls"><meta property="article:tag" content="Containerd"><meta property="article:tag" content="Ctr"><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","articleSection":"posts","name":"Deploying Local Registry with TLS and Auth","headline":"Deploying Local Registry with TLS and Auth","alternativeHeadline":"","description":"
+      
+        If you are working with container images, there will be cases where you want to have a proper registry setup locally with TLS and authentication for testing as well as CI purposes. The below steps outline how a local registry can be deployed with a self signed certificate.\nCreate a directory for storing the registry data, certificates and authentication data. mkdir -p .\/my-docker-registry\/{auth,certs,data} Now create the authentication data using htpasswd docker run --rm --entrypoint htpasswd httpd:2 -Bbn \u0026lt;user\u0026gt; \u0026lt;password\u0026gt; \u0026gt; .
+
+
+      
+
+
+    ","inLanguage":"en-us","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/akhilerm.com\/posts\/local-registry-with-tls-auth\/"},"author":{"@type":"Person","name":"Akhil Mohan"},"creator":{"@type":"Person","name":"Akhil Mohan"},"accountablePerson":{"@type":"Person","name":"Akhil Mohan"},"copyrightHolder":{"@type":"Person","name":"Akhil Mohan"},"copyrightYear":"2024","dateCreated":"2024-11-24T16:14:55.00Z","datePublished":"2024-11-24T16:14:55.00Z","dateModified":"2024-11-24T16:14:55.00Z","publisher":{"@type":"Organization","name":"Akhil Mohan","url":"https://akhilerm.com/","logo":{"@type":"ImageObject","url":"https:\/\/akhilerm.com\/favicons\/favicon-32x32.png","width":"32","height":"32"}},"image":[],"url":"https:\/\/akhilerm.com\/posts\/local-registry-with-tls-auth\/","wordCount":"499","genre":["Tech","Blog"],"keywords":["registry","docker","tls","containerd","ctr"]}</script></head><body class=body><div class=wrapper><aside class=wrapper__sidebar><div class="sidebar
+animated fadeInDown"><div class=sidebar__content><div class=sidebar__introduction><img class=sidebar__introduction-profileimage src=/images/akhilerm.jpg alt="profile picture"><div class=sidebar__introduction-title><a href=/>Akhil</a></div><div class=sidebar__introduction-description><p>Engineer | Thinker | Learner</p></div></div><ul class=sidebar__list><li class=sidebar__list-item><a href=https://linkedin.com/in/akhilerm target=_blank rel="noopener me" aria-label=Linkedin title=Linkedin><i class="fab fa-linkedin fa-2x" aria-hidden=true></i></a></li><li class=sidebar__list-item><a href=https://github.com/akhilerm target=_blank rel="noopener me" aria-label=GitHub title=GitHub><i class="fab fa-github fa-2x" aria-hidden=true></i></a></li><li class=sidebar__list-item><a href=https://twitter.com/akhilerm target=_blank rel="noopener me" aria-label=Twitter title=Twitter><i class="fab fa-twitter fa-2x" aria-hidden=true></i></a></li><li class=sidebar__list-item><a href=mailto:akhilerm@gmail.com target=_blank rel="noopener me" aria-label=e-mail title=e-mail><i class="fas fa-envelope fa-2x" aria-hidden=true></i></a></li></ul></div><footer class="footer footer__sidebar"><ul class=footer__list><li class=footer__item>&copy;
+Akhil Mohan
+2024</li></ul></footer><script type=text/javascript src=/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ=" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-3QDB62WNH6"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-3QDB62WNH6")</script></div></aside><main class=wrapper__main><header class=header><div class="animated fadeInDown"><a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false><span aria-hidden=true class=navbar-burger__line></span>
+<span aria-hidden=true class=navbar-burger__line></span>
+<span aria-hidden=true class=navbar-burger__line></span></a><nav class=nav><ul class=nav__list id=navMenu><li class=nav__list-item><a href=/ title>Home</a></li><li class=nav__list-item><a href=/posts title>Posts</a></li><li class=nav__list-item><a href=/portfolio title>Portfolio</a></li><li class=nav__list-item><a href=https://akhilerm.s3.amazonaws.com/akhilerm.pdf target=_blank rel="noopener noreferrer" title>Resume</a></li></ul><ul class="nav__list nav__list--end"></ul></nav></div></header><div class="post
+animated fadeInDown"><div class=post__content><h1>Deploying Local Registry With TLS and Auth</h1><p>If you are working with container images, there will be cases where you want to have a proper registry setup locally
+with TLS and authentication for testing as well as CI purposes. The below steps outline how a local registry can be
+deployed with a self signed certificate.</p><ol><li>Create a directory for storing the registry data, certificates and authentication data.</li></ol><pre tabindex=0><code>mkdir -p ./my-docker-registry/{auth,certs,data}
+</code></pre><ol start=2><li>Now create the authentication data using <code>htpasswd</code></li></ol><pre tabindex=0><code>docker run --rm --entrypoint htpasswd httpd:2 -Bbn &lt;user&gt; &lt;password&gt;  &gt; ./my-docker-registry/auth/htpasswd
+</code></pre><ol start=3><li>Create a new file <code>./my-docker-registry/certs/domain.ext</code> with the below content for adding a Subject Alternative Name (SAN)
+into the certificate which is required by modern clients.</li></ol><pre tabindex=0><code>[req]
+default_bits       = 4096
+distinguished_name = req_distinguished_name
+req_extensions     = req_ext
+x509_extensions    = v3_ca
+prompt             = no
+
+[req_distinguished_name]
+C = US
+ST = State
+L = Locality
+O = Organization
+OU = Organizational Unit
+CN = localhost
+
+[req_ext]
+subjectAltName = @alt_names
+
+[v3_ca]
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = localhost
+IP.1 = 127.0.0.1
+</code></pre><ol start=4><li>Now create the self signed certificate</li></ol><pre tabindex=0><code>openssl req -newkey rsa:4096 -nodes -sha256 -keyout ./my-docker-registry/certs/domain.key -x509 -days 365 -out ./my-docker-registry/certs/domain.crt -config ./my-docker-registry/certs/domain.ext
+</code></pre><ol start=5><li>Copy the generated certificates into the trust store of docker, containerd (if you plan to use ctr) and system for the domain at
+at which you will be starting the registry (<code>localhost:5000</code> in this case).</li></ol><pre tabindex=0><code>sudo mkdir -p /etc/docker/certs.d/localhost:5000
+sudo mkdir -p /etc/containerd/certs.d/localhost:5000
+sudo cp ./my-docker-registry/certs/domain.crt /etc/docker/certs.d/localhost:5000/ca.crt
+sudo cp ./my-docker-registry/certs/domain.crt /etc/containerd/certs.d/localhost:5000/ca.crt
+</code></pre><ol start=6><li>Restart containerd and docker</li></ol><pre tabindex=0><code>sudo systemctl restart containerd
+sudo systemctl restart docker
+</code></pre><ol start=7><li>Create a <code>./my-docker-registry/config.yml</code> for the registry configuration</li></ol><pre tabindex=0><code>version: 0.1
+storage:
+  filesystem:
+    rootdirectory: /var/lib/registry 
+#Other optional configuration
+#http:
+#  tls:
+#    minimumtls: tls1.3
+</code></pre><ol start=8><li>Start the registry container at port 5000</li></ol><pre tabindex=0><code>docker run -d  -p 5000:5000 --restart=always --name registry   -v $PWD/my-docker-registry/data:/var/lib/registry   -v $PWD/my-docker-registry/auth:/auth   -e &#34;REGISTRY_AUTH=htpasswd&#34;   -e &#34;REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm&#34;   -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd   -v $PWD/my-docker-registry/certs:/certs -v $PWD/my-docker-registry/config.yml:/etc/docker/registry/config.yml  -e REGISTRY_HTTP_ADDR=0.0.0.0:5000   -e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/domain.crt   -e REGISTRY_HTTP_TLS_KEY=/certs/domain.key   registry:2.8.3
+</code></pre><ol start=9><li>Now login to the local registry</li></ol><pre tabindex=0><code>docker login -u &lt;user&gt; -p &lt;password&gt; https://localhost:5000 
+
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /home/akhil/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+</code></pre><ol start=10><li>Now the images can be pulled pushed from the local registry</li></ol><pre tabindex=0><code>akhil@akhilerm:~ $ docker push localhost:5000/busybox:latest
+The push refers to repository [localhost:5000/busybox]
+58f32e9504c8: Pushed 
+latest: digest: sha256:ff0b2bbabd0147f23a4b4b499175a2aadf4b775285ea4cfdeb7b30fa3af4bdb8 size: 527
+
+akhil@akhilerm:~ $ ctr image pull --user akhil:12345678  localhost:5000/busybox:latest
+localhost:5000/busybox:latest                   saved
+└──manifest (ff0b2bbabd01)                      complete        |++++++++++++++++++++++++++++++++++++++|
+   ├──layer (13c1f3d7904f)                      complete        |++++++++++++++++++++++++++++++++++++++|
+   └──config (27a71e19c956)                     complete        |++++++++++++++++++++++++++++++++++++++|
+application/vnd.docker.distribution.manifest.v2+json sha256:ff0b2bbabd0147f23a4b4b499175a2aadf4b775285ea4cfdeb7b30fa3af4bdb8
+Completed pull from OCI Registry (localhost:5000/busybox:latest)        elapsed: 0.1 s  total:  2.1 Mi  (24.9 MiB/s)
+</code></pre><p>The following docker and containerd versions were used for creating the above docs</p><pre tabindex=0><code>akhil@akhilerm:~ $ docker version
+Client: Docker Engine - Community
+ Version:           26.1.3
+ API version:       1.45
+ Go version:        go1.21.10
+ Git commit:        b72abbb
+ Built:             Thu May 16 08:33:29 2024
+ OS/Arch:           linux/amd64
+ Context:           default
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          26.1.3
+  API version:      1.45 (minimum version 1.24)
+  Go version:       go1.21.10
+  Git commit:       8e96db1
+  Built:            Thu May 16 08:33:29 2024
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          v2.0.0
+  GitCommit:        207ad711eabd375a01713109a8a197d197ff6542
+ runc:
+  Version:          1.1.12
+  GitCommit:        v1.1.12-0-g51d5e946
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+</code></pre></div><div class=post__footer><span><a class=category href=/categories/tech/>Tech</a><a class=category href=/categories/blog/>Blog</a></span>
+<span><a class=tag href=/tags/registry/>registry</a><a class=tag href=/tags/docker/>docker</a><a class=tag href=/tags/tls/>tls</a><a class=tag href=/tags/containerd/>containerd</a><a class=tag href=/tags/ctr/>ctr</a></span></div></div></main></div><footer class="footer footer__base"><ul class=footer__list><li class=footer__item>&copy;
+Akhil Mohan
+2024</li></ul></footer><script type=text/javascript src=/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ=" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-3QDB62WNH6"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-3QDB62WNH6")</script></body></html>
