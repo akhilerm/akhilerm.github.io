@@ -14,6 +14,8 @@
     - Containerd: Project Update and Deep Dive @[KubeCon + CloudNativeCon + Open Source Summit + AI_dev China](https://www.youtube.com/watch?v=J9sHhDfYRwA)
     - Improving container startup time using stargz @ [DevOpsDays Kerala](https://www.youtube.com/watch?v=HK-LEHr3qjs)
     - containerd Packaging: Who Should Ship and How? @ [Kubecon + CloudNativeCon Maintainer Summit India](https://www.youtube.com/watch?v=lrEFji9AkiQ)
+    - Into containerd; Through the Eyes of a Contributor @ [Kubecon + CloudNativeCon IN](https://www.youtube.com/watch?v=R0x8KKtht9I)
+    - A Debugging Journey from CoreDNS to Coreutils @ [Kubecon + CloudNativeCon IN](https://www.youtube.com/watch?v=_7P61ojiCKk)
 - 2023
     - Releasing Kubernetes Libraries using publishing-bot @ [Kubernetes Contributor Summit NA](https://sched.co/1Sp9W)
     - Finch: An Open Source Client for Container Development by AWS @ [AWS Community Day Kochi 2023](https://www.youtube.com/watch?v=aM9MArQRki4)
