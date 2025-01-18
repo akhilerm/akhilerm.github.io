@@ -33,7 +33,7 @@
 #### Personal Projects 👨 
 
 ###### 2025
-- [Bucket](https://github.com/akhilerm/my-cart-alexa-skill) : Alexa skill to manage todoist shopping list.
+- [Bucket 📝](https://github.com/akhilerm/my-cart-alexa-skill) : Alexa skill to manage todoist shopping list.
 
 
 ###### 2022
