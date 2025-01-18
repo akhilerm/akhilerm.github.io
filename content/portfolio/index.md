@@ -32,6 +32,10 @@
 
 #### Personal Projects 👨 
 
+###### 2025
+- [Bucket](https://github.com/akhilerm/my-cart-alexa-skill) : Alexa skill to manage todoist shopping list.
+
+
 ###### 2022
 - [Eywa 💳](https://github.com/akhilerm/eywa) : Service to generate UPI payment request for pending splitwise balance.
 
