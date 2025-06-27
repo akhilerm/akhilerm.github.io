@@ -9,6 +9,8 @@
 
 
 #### Talks 👨🎤
+- 2025
+    - Containerd: Project Update and Deep Dive @ [KubeCon + CloudNativeCon Japan](https://www.youtube.com/watch?v=52KuYYllO2E)
 - 2024
     - What’s New in Containerd 2.0? @ [KubeCon + CloudNativeCon EU](https://www.youtube.com/watch?v=u89nrwWoA-w)
     - Containerd: Project Update and Deep Dive @[KubeCon + CloudNativeCon + Open Source Summit + AI_dev China](https://www.youtube.com/watch?v=J9sHhDfYRwA)
