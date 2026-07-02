@@ -9,6 +9,8 @@
 
 
 #### Talks 👨🎤
+- 2026
+    - Kubernetes Workload Resiliency in Action: Beyond Basics @ [Kubecon + CloudNativeCon India](https://www.youtube.com/watch?v=LlR_WCn2jFQ)
 - 2025
     - Containerd: Project Update and Deep Dive @ [KubeCon + CloudNativeCon Japan](https://www.youtube.com/watch?v=52KuYYllO2E)
 - 2024
