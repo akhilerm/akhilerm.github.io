@@ -11,6 +11,7 @@
 #### Talks 👨🎤
 - 2026
     - Kubernetes Workload Resiliency in Action: Beyond Basics @ [Kubecon + CloudNativeCon India](https://www.youtube.com/watch?v=LlR_WCn2jFQ)
+    - From pod.yaml to /dev/nvidia0: The Plumbing That Actually Hands a Pod its GPU @ [Cloud Native Summit Kerala](https://youtu.be/JbathMg2Dr8?si=klJaPcW_4EhjJZcE)
 - 2025
     - Containerd: Project Update and Deep Dive @ [KubeCon + CloudNativeCon Japan](https://www.youtube.com/watch?v=52KuYYllO2E)
 - 2024
